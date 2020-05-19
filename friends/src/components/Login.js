@@ -20,8 +20,6 @@ function Login() {
     axiosWithAuth()
       .post('/api/login', formInput)
       .then(res => {
-        // res.data.payload
-        // console.log(res);
         localStorage.setItem("token", res.data.payload);
         history.push('/friends');
       })
