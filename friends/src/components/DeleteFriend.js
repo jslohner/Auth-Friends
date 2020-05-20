@@ -10,7 +10,7 @@ function DeleteFriend() {
     axiosWithAuth()
       .delete(`/api/friends/${formInput.targetFriend}`)
       .then(res => {
-        console.log(res);
+        history.push('/friends');
       })
       .catch(err => {
         console.log(err.response);
@@ -27,7 +27,6 @@ function DeleteFriend() {
   const deleteTargetFriend = e => {
     e.preventDefault();
     deleteFriend();
-    history.push('/friends');
   };
 
   return (

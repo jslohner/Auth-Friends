@@ -10,7 +10,7 @@ function EditFriend() {
     axiosWithAuth()
       .put(`/api/friends/${formInput.targetFriend}`, { [formInput.targetField]: formInput.fieldEdit })
       .then(res => {
-        console.log(res);
+        history.push('/friends');
       })
       .catch(err => {
         console.log(err.response);
@@ -27,7 +27,6 @@ function EditFriend() {
   const editTargetFriend = e => {
     e.preventDefault();
     putFriend();
-    history.push('/friends');
   };
 
   return (

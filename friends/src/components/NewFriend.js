@@ -10,7 +10,7 @@ function NewFriend() {
     axiosWithAuth()
       .post('/api/friends', formInput)
       .then(res => {
-        console.log(res);
+        history.push('/friends');
       })
       .catch(err => {
         console.log(err.response);
@@ -27,7 +27,6 @@ function NewFriend() {
   const createNewFriend = e => {
     e.preventDefault();
     postNewFriend();
-    history.push('/friends');
   };
 
   return (

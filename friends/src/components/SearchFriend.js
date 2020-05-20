@@ -33,7 +33,7 @@ function SearchFriend(props) {
         <input onChange={onInputChange} value={props.searchId} type='text' name='search' placeholder='Search'/>
         <button onClick={search}>Search</button>
       </form>
-      {Object.keys(friend).length === 0 && <h3>Search for a Friend</h3>}
+      {Object.keys(friend).length === 0 && <h3>Search for a Friend by ID</h3>}
       {Object.keys(friend).length > 0 && <Friend friendData={friend}/>}
     </div>
   );
