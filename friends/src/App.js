@@ -12,6 +12,9 @@ function App() {
   return (
     <div className='App'>
       <Link to='/login'>Login</Link>
+      <Link to='/friends'>Friends</Link>
+      <Link to='/searchfriends'>Search Friends</Link>
+      <Link to='/newfriend'>New Friend</Link>
       <Switch>
         <Route path='/login' component={Login}/>
         <PrivateRoute exact path='/friends' component={FriendsList}/>
