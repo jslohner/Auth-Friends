@@ -7,13 +7,6 @@ function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const onInputChange = e => {
-    setFormInput({
-      ...formInput,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const login = e => {
     e.preventDefault();
     setIsLoading(true);
@@ -29,6 +22,13 @@ function Login() {
         setIsLoading(false);
         console.log(err.response);
       });
+  };
+
+  const onInputChange = e => {
+    setFormInput({
+      ...formInput,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
